@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:plant_app/custom_widgets/custom_textfield.dart';
+import 'package:plant_app/register_screen.dart';
+import 'custom_widgets/custom_stack_widget.dart';
+
 class LoginScreen extends StatefulWidget {
-
-
   @override
   State<LoginScreen> createState() => _LoginScreenState();
 }
@@ -10,9 +12,7 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     int? _value = 0;
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
+    return Scaffold(
         body: SingleChildScrollView(
           child: Column(
             children: [
@@ -41,38 +41,7 @@ class _LoginScreenState extends State<LoginScreen> {
               SizedBox(
                 height: 50.0,
               ),
-              Stack(
-                overflow: Overflow.visible,
-                children: [
-                  Expanded(
-                    child: Column(
-                      children: [
-                        Text(
-                          'Welcome Back',
-                          style: TextStyle(
-                              fontSize: 30.0,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.black),
-                        ),
-                        SizedBox(
-                          height: 10,
-                        ),
-                        Text(
-                          'Login to your account',
-                          style: TextStyle(color: Colors.grey),
-                        )
-                      ],
-                    ),
-                  ),
-                  Positioned(
-                    left: 200,
-                    child: Container(
-                      height: 50,
-                      child: Image.asset('images/leaf.png'),
-                    ),
-                  )
-                ],
-              ),
+              CustomStack('Welcome Back', 'Login to your account'),
               SizedBox(
                 height: 30.0,
               ),
@@ -80,32 +49,9 @@ class _LoginScreenState extends State<LoginScreen> {
                 padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
                 child: Column(
                   children: [
-                    TextField(
-                      decoration: InputDecoration(
-                          prefixIcon: Icon(Icons.account_circle),
-                          border: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(15.0),
-                              borderSide: BorderSide.none),
-                          fillColor: Color(0xffE8F0EE),
-                          filled: true,
-                          hintText: 'FullName'),
-                    ),
+                    CustomTextField('Full Name',Icons.account_circle_outlined),
                     SizedBox(height: 20.0),
-                    TextField(
-                      obscureText: true,
-                      decoration: InputDecoration(
-                          prefixIcon: Icon(
-                            Icons.lock,
-                            color: Colors.grey,
-                          ),
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(15.0),
-                            borderSide: BorderSide.none,
-                          ),
-                          fillColor: Color(0xffE8F0EE),
-                          filled: true,
-                          hintText: 'Password'),
-                    ),
+                    CustomTextField('Password',Icons.lock_outline),
                     Row(
                       children: [
                         Radio(
@@ -125,7 +71,10 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
                         TextButton(
                           onPressed: () {},
-                          child: Text('Forgot Password?',style: TextStyle(color: Color(0xff3F6A51)),),
+                          child: Text(
+                            'Forgot Password?',
+                            style: TextStyle(color: Color(0xff3F6A51)),
+                          ),
                         ),
                         // RadioListTile(value: 1, groupValue: 1, onChanged:(value){}),
                       ],
@@ -133,7 +82,6 @@ class _LoginScreenState extends State<LoginScreen> {
                   ],
                 ),
               ),
-
               SizedBox(
                 height: 80,
               ),
@@ -142,13 +90,10 @@ class _LoginScreenState extends State<LoginScreen> {
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
                       shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(30.0)
-                      ),
-                      minimumSize: Size(350,50),
+                          borderRadius: BorderRadius.circular(30.0)),
+                      minimumSize: Size(350, 50),
                       primary: Color(0xff3F6A51),
-
                     ),
-
                     onPressed: () {},
                     child: Text(
                       'Login',
@@ -159,9 +104,21 @@ class _LoginScreenState extends State<LoginScreen> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text("Don't have an account?"),
-                      TextButton(onPressed: (){}, child: Text('SIgn Up', style: TextStyle(
-                          decoration: TextDecoration.underline, color: Color(0xff3F6A51)
-                      ),),)
+                      TextButton(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => RegisterScreen()),
+                          );
+                        },
+                        child: Text(
+                          'Sign Up',
+                          style: TextStyle(
+                              decoration: TextDecoration.underline,
+                              color: Color(0xff3F6A51)),
+                        ),
+                      )
                     ],
                   )
                 ],
@@ -169,7 +126,6 @@ class _LoginScreenState extends State<LoginScreen> {
             ],
           ),
         ),
-      ),
     );
   }
 }
