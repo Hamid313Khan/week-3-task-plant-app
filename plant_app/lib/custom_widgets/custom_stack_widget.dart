@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 class CustomStack extends StatelessWidget {
- CustomStack(this.heading,this.subHeading);
- String heading;
- String subHeading;
+  CustomStack(this.heading, this.subHeading);
+  String heading;
+  String subHeading;
 
   @override
   Widget build(BuildContext context) {

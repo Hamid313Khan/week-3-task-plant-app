@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:plant_app/custom_widgets/custom_textfield.dart';
-import 'custom_widgets/custom_stack_widget.dart';
+import '../custom_widgets/custom_stack_widget.dart';
+import 'home_screen.dart';
 
 class RegisterScreen extends StatefulWidget {
   @override
@@ -17,7 +18,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Container(
-              margin: EdgeInsets.only(left: 0.0, top: 10.0,right: 500),
+              margin: EdgeInsets.only(left: 0.0, top: 10.0, right: 500),
               child: FloatingActionButton.small(
                 backgroundColor: Color(0xffE8EFEE),
                 onPressed: () {},
@@ -27,25 +28,35 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 ),
               ),
             ),
-            SizedBox(height: 40,),
+            SizedBox(
+              height: 40,
+            ),
             CustomStack('Register', 'Create your new account'),
             SizedBox(
               height: 20,
             ),
-            CustomTextField('Full Name', Icons.account_circle_outlined),
-            SizedBox(height: 20,),
-            CustomTextField('Email', Icons.email_outlined),
-            SizedBox(height: 20,),
-            CustomTextField('Password', Icons.lock_outline),
-            SizedBox(height: 20,),
-            CustomTextField('Confirm Password', Icons.lock_outline),
+            CustomTextField('Full Name', Icons.account_circle_outlined, null),
+            SizedBox(
+              height: 20,
+            ),
+            CustomTextField('Email', Icons.email_outlined, null),
+            SizedBox(
+              height: 20,
+            ),
+            CustomTextField('Password', Icons.lock_outline, null),
+            SizedBox(
+              height: 20,
+            ),
+            CustomTextField('Confirm Password', Icons.lock_outline, null),
             SizedBox(
               height: 10,
             ),
             Text(
-                'By Signing in , you agree to our term of use and privacy notice',
-                style: TextStyle(
-                    color: Color(0xff3F6A51), fontWeight: FontWeight.bold), textAlign: TextAlign.center,),
+              'By Signing in , you agree to our term of use and privacy notice',
+              style: TextStyle(
+                  color: Color(0xff3F6A51), fontWeight: FontWeight.bold),
+              textAlign: TextAlign.center,
+            ),
             SizedBox(
               height: 150,
             ),
@@ -70,8 +81,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(
-                          builder: (context) => RegisterScreen()),
+                      MaterialPageRoute(builder: (context) => HomeScreen()),
                     );
                   },
                   child: Text(

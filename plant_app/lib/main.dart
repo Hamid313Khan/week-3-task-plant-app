@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'login_screen.dart';
-import 'register_screen.dart';
+import 'Screens/login_screen.dart';
+import 'Screens/register_screen.dart';
+import 'package:plant_app/Screens/home_screen.dart';
 
 void main() {
   runApp(PlantApp());
@@ -17,7 +18,7 @@ class _PlantAppState extends State<PlantApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: LoginScreen(),
+      home: HomeScreen(),
     );
   }
 }
