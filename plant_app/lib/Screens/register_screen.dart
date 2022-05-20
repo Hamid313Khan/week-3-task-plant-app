@@ -11,8 +11,7 @@ class RegisterScreen extends StatefulWidget {
 class _RegisterScreenState extends State<RegisterScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Padding(
+    return  Padding(
         padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -95,7 +94,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
             )
           ],
         ),
-      ),
     );
   }
 }

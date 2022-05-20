@@ -44,6 +44,7 @@ flutter:
     - images/leaf.png
     - images/plant.png
     - images/potplant.jpg
+    - images/plant3.png
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

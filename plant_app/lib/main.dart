@@ -3,6 +3,8 @@ import 'package:flutter/widgets.dart';
 import 'Screens/login_screen.dart';
 import 'Screens/register_screen.dart';
 import 'package:plant_app/Screens/home_screen.dart';
+import 'Screens/buying_screen.dart';
+import 'package:plant_app/Screens/product-detail.dart';
 
 void main() {
   runApp(PlantApp());

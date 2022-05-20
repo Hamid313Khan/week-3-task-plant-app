@@ -38,12 +38,12 @@ class _LoginScreenState extends State<LoginScreen> {
               ],
             ),
           ),
-          SizedBox(
-            height: 50.0,
-          ),
+          // SizedBox(
+          //   height: 10.0,
+          // ),
           CustomStack('Welcome Back', 'Login to your account'),
           SizedBox(
-            height: 30.0,
+            height: 20.0,
           ),
           Padding(
             padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
@@ -51,7 +51,7 @@ class _LoginScreenState extends State<LoginScreen> {
               children: [
                 CustomTextField(
                     'Full Name', Icons.account_circle_outlined, null),
-                SizedBox(height: 20.0),
+                SizedBox(height: 10.0),
                 CustomTextField('Password', Icons.lock_outline, null),
                 Row(
                   children: [
@@ -84,7 +84,7 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
           ),
           SizedBox(
-            height: 80,
+            height: 70,
           ),
           Column(
             children: [
@@ -136,16 +136,79 @@ class CustomClip extends CustomClipper<Path> {
     Path path = Path();
     final double _xScaling = size.width / 414;
     final double _yScaling = size.height / 896;
-    path.lineTo(1125.5 * _xScaling,0.5 * _yScaling);
-    path.cubicTo(1125.5 * _xScaling,191.5 * _yScaling,1125.5 * _xScaling,382.5 * _yScaling,1125.5 * _xScaling,573.5 * _yScaling,);
-    path.cubicTo(1112.31 * _xScaling,598.04 * _yScaling,1090.67 * _xScaling,632.05 * _yScaling,1056.5 * _xScaling,665.5 * _yScaling,);
-    path.cubicTo(986.5699999999999 * _xScaling,733.95 * _yScaling,906.42 * _xScaling,758.6800000000001 * _yScaling,870.5 * _xScaling,766.5 * _yScaling,);
-    path.cubicTo(682.11 * _xScaling,807.5 * _yScaling,609.24 * _xScaling,623.03 * _yScaling,431.5 * _xScaling,649.5 * _yScaling,);
-    path.cubicTo(277.13 * _xScaling,672.49 * _yScaling,231.26 * _xScaling,826.65 * _yScaling,138.5 * _xScaling,804.5 * _yScaling,);
-    path.cubicTo(62.75 * _xScaling,786.41 * _yScaling,22.269999999999996 * _xScaling,666.65 * _yScaling,-0.5 * _xScaling,533.5 * _yScaling,);
-    path.cubicTo(-0.33 * _xScaling,356 * _yScaling,-0.17 * _xScaling,178.5 * _yScaling,0 * _xScaling,1 * _yScaling,);
-    path.cubicTo(375.17 * _xScaling,0.83 * _yScaling,750.33 * _xScaling,0.67 * _yScaling,1125.5 * _xScaling,0.5 * _yScaling,);
-    path.cubicTo(1125.5 * _xScaling,0.5 * _yScaling,1125.5 * _xScaling,0.5 * _yScaling,1125.5 * _xScaling,0.5 * _yScaling,);
+    path.lineTo(1125.5 * _xScaling, 0.5 * _yScaling);
+    path.cubicTo(
+      1125.5 * _xScaling,
+      191.5 * _yScaling,
+      1125.5 * _xScaling,
+      382.5 * _yScaling,
+      1125.5 * _xScaling,
+      573.5 * _yScaling,
+    );
+    path.cubicTo(
+      1112.31 * _xScaling,
+      598.04 * _yScaling,
+      1090.67 * _xScaling,
+      632.05 * _yScaling,
+      1056.5 * _xScaling,
+      665.5 * _yScaling,
+    );
+    path.cubicTo(
+      986.5699999999999 * _xScaling,
+      733.95 * _yScaling,
+      906.42 * _xScaling,
+      758.6800000000001 * _yScaling,
+      870.5 * _xScaling,
+      766.5 * _yScaling,
+    );
+    path.cubicTo(
+      682.11 * _xScaling,
+      807.5 * _yScaling,
+      609.24 * _xScaling,
+      623.03 * _yScaling,
+      431.5 * _xScaling,
+      649.5 * _yScaling,
+    );
+    path.cubicTo(
+      277.13 * _xScaling,
+      672.49 * _yScaling,
+      231.26 * _xScaling,
+      826.65 * _yScaling,
+      138.5 * _xScaling,
+      804.5 * _yScaling,
+    );
+    path.cubicTo(
+      62.75 * _xScaling,
+      786.41 * _yScaling,
+      22.269999999999996 * _xScaling,
+      666.65 * _yScaling,
+      -0.5 * _xScaling,
+      533.5 * _yScaling,
+    );
+    path.cubicTo(
+      -0.33 * _xScaling,
+      356 * _yScaling,
+      -0.17 * _xScaling,
+      178.5 * _yScaling,
+      0 * _xScaling,
+      1 * _yScaling,
+    );
+    path.cubicTo(
+      375.17 * _xScaling,
+      0.83 * _yScaling,
+      750.33 * _xScaling,
+      0.67 * _yScaling,
+      1125.5 * _xScaling,
+      0.5 * _yScaling,
+    );
+    path.cubicTo(
+      1125.5 * _xScaling,
+      0.5 * _yScaling,
+      1125.5 * _xScaling,
+      0.5 * _yScaling,
+      1125.5 * _xScaling,
+      0.5 * _yScaling,
+    );
     return path;
   }
 
